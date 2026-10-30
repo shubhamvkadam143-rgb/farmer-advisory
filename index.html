@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HabitMind AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">✦ HabitMind <span>AI</span></div>
+      <p>Your personal habit coach</p>
+    </header>
+
+    <section class="welcome">
+      <p class="muted">YOUR DAILY JOURNEY</p>
+      <h1>Small steps.<br><span>Big changes.</span></h1>
+      <p>Build better habits, one day at a time.</p>
+    </section>
+
+    <section class="stats">
+      <div class="card">
+        <p>Today's progress</p>
+        <h2 id="progress">0%</h2>
+        <div class="track"><div id="progressBar"></div></div>
+      </div>
+      <div class="card">
+        <p>Habits completed</p>
+        <h2 id="completed">0 / 0</h2>
+        <p class="muted">Keep moving forward!</p>
+      </div>
+    </section>
+
+    <section class="habits-section">
+      <div class="section-title">
+        <h2>My habits</h2>
+        <span id="date"></span>
+      </div>
+
+      <form id="habitForm">
+        <input id="habitInput" type="text"
+          placeholder="Add a new habit..." maxlength="60" required>
+        <button type="submit">+ Add</button>
+      </form>
+
+      <div id="habitList"></div>
+    </section>
+
+    <section class="coach">
+      <h2>✦ Habit Coach</h2>
+      <p id="coachMessage">
+        Start small. Complete your first habit today!
+      </p>
+      <button id="tipButton" class="secondary">
+        Get motivation
+      </button>
+    </section>
+    
+<section class="detective">
+  <div class="detective-heading">
+    <span class="detective-icon">🕵️</span>
+    <div>
+      <p class="detective-label">SMART HABIT ANALYSIS</p>
+      <h2>Habit Detective</h2>
+    </div>
+  </div>
+
+  <p class="detective-intro">
+    Habit miss hui? Chalo, reason find karte hain
+    aur ek better plan banate hain.
+  </p>
+
+  <form id="detectiveForm">
+    <label for="detectiveHabit">Kaunsi habit difficult rahi?</label>
+    <select id="detectiveHabit" required>
+      <option value="">Pehle habit select karo</option>
+    </select>
+
+    <label for="missReason">Habit kyun miss hui?</label>
+    <select id="missReason" required>
+      <option value="">Ek reason select karo</option>
+      <option value="time">Time nahi mila</option>
+      <option value="forgot">Bhool gaya</option>
+      <option value="tired">Thakaan ya low energy</option>
+      <option value="difficult">Habit bahut difficult thi</option>
+      <option value="distraction">Mobile ya distractions</option>
+      <option value="motivation">Motivation nahi thi</option>
+    </select>
+
+    <label for="missTime">Aam taur par kab karte ho?</label>
+    <select id="missTime">
+      <option value="morning">Subah</option>
+      <option value="afternoon">Dopahar</option>
+      <option value="evening">Shaam</option>
+      <option value="night">Raat</option>
+      <option value="anytime">Koi fixed time nahi</option>
+    </select>
+
+    <label for="habitDifficulty">Habit kitni difficult lagti hai?</label>
+    <select id="habitDifficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Difficult</option>
+    </select>
+
+    <button type="submit" class="detective-button">
+      🔍 Find My Habit Pattern
+    </button>
+  </form>
+
+  <div id="detectiveResult"
+       class="detective-result"
+       aria-live="polite"
+       hidden>
+  </div>
+</section>
+
+
+    <footer>Made for a better you · HabitMind AI</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
